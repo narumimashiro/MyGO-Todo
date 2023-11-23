@@ -1,0 +1,10 @@
+本当はFEは別のもので書いた方が良さそうだったが、今回はパスで
+
+・FE
+HTMLとせっかくだからスタイリングはTailwindCSS使ってみる？
+
+・API
+Golang
+
+・DB
+Firebaseでいいかなのお気持ち
