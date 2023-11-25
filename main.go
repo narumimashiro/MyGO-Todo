@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"github.com/labstack/echo/v4"
-	"github.com/narumimashiro/MyGO-Todo/go_modules"
+	"go_modules"
 )
 
 func main() {
@@ -11,7 +11,7 @@ func main() {
 	e := echo.New()
 
 	// テンプレートの設定
-	e.Renderer = NewTemplate()
+	e.Renderer = go_modules.NewTemplate()
 
 	// ルーティング
 	e.GET("/", handleHome)

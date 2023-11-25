@@ -1,4 +1,4 @@
-package submit
+package go_modules
 
 import (
 	"fmt"

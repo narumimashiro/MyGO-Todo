@@ -1,4 +1,4 @@
-module mygotodo
+module github.com/narumimashiro/MyGO-Todo
 
 go 1.21.4
 

@@ -1,4 +1,4 @@
-package template
+package go_modules
 
 import (
 	"html/template"
