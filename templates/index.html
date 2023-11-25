@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .PageTitle }}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body class="bg-gray-100">
+    <div class="container mx-auto my-8 max-w-md">
+      <h1 class="text-3xl font-bold mb-4">Todo List</h1>
+
+      <!-- Todo Form -->
+      <form action="/add" method="post" class="mb-4">
+        <input
+          type="text"
+          name="task"
+          class="w-full p-2 border rounded"
+          placeholder="Add a new task"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-4 py-2 rounded ml-2"
+        >
+          Add
+        </button>
+      </form>
+
+      <!-- Todo List -->
+      <ul class="list-disc">
+        {% comment %} {{range .Todos}} {% endcomment %}
+        <li
+          class="flex items-center justify-between bg-white p-4 mb-2 border rounded"
+        >
+          {% comment %} <span>{{.Task}}</span> {% endcomment %}
+          <form action="/complete/{{.ID}}" method="post">
+            <button type="submit" class="text-green-500">Complete</button>
+          </form>
+        </li>
+        {% comment %} {{end}} {% endcomment %}
+      </ul>
+    </div>
+  </body>
 </html>

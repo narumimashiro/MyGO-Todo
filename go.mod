@@ -1,4 +1,4 @@
-module todoapp
+module mygotodo
 
 go 1.21.4
 

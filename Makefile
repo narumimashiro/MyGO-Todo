@@ -1,12 +1,12 @@
 # makefile
 
-.PHONY build run clean
+.PHONY: build run clean
 
 build:
-    go run build -o MyGOTodo
+	go build -o MyGOTodo
 
 run:
-    go run main.go
+	go run main.go
 
 clean:
-    rm -rf MyGoTodo
+	rm -rf MyGoTodo
