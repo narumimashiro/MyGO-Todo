@@ -2,7 +2,8 @@ package go_modules
 
 import (
 	"html/template"
-	"io"
+    "io"
+    "github.com/labstack/echo/v4"
 )
 
 func NewTemplate() *Template {

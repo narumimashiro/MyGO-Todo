@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"github.com/labstack/echo/v4"
-	"go_modules"
+	"github.com/narumimashiro/MyGO-Todo/go_modules"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 	e.Start(":3000")
 
 	// add task endpoint
-	http.HandleFunc("/add", HandleAdd)
+	http.HandleFunc("/add", go_modules.HandleAdd)
 	http.ListenAndServe(":3000", nil)
 }
 

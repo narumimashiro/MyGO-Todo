@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func HandleAdd (w http.ResponseWriter, r *Request) {
+func HandleAdd (w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 
 		// フォーム送信されてきたデータの取得
